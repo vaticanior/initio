@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -159,16 +158,16 @@
         const hours = String(currentDate.getHours()).padStart(2, '0');
         const minutes = String(currentDate.getMinutes()).padStart(2, '0');
         const seconds = String(currentDate.getSeconds()).padStart(2, '0');
-        const dateStr = ${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()};
+        const dateStr = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
         currentDateElem.textContent = dateStr;
-        currentTimeElem.textContent = ${hours}:${minutes}:${seconds};
+        currentTimeElem.textContent = `${hours}:${minutes}:${seconds}`;
     }
 
     // Contador de tiempo conectado
     let timeCounter = 0;
     setInterval(() => {
         timeCounter++;
-        timeCounterElem.textContent = ${timeCounter} segundos;
+        timeCounterElem.textContent = `${timeCounter} segundos`;
     }, 1000);
 
     // Actualizar fecha y hora cada segundo
@@ -184,16 +183,10 @@
     if (currentUser) {
         document.getElementById("name").textContent = currentUser.name;
         document.getElementById("accountNumber").textContent = currentUser.accountNumber;
-
-   if (currentUser) {
         document.getElementById("mensaje1").textContent = currentUser.mensaje1;
         document.getElementById("mensaje2").textContent = currentUser.mensaje2;
         document.getElementById("mensaje3").textContent = currentUser.mensaje3;
-
-        
-        };
     }
 </script>
-
 </body>
 </html>
